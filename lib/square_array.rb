@@ -1,6 +1,6 @@
-def square_array(array)
-  array.each_with_object([]) { |i,arr| arr << i ** 2 }
+def square_array(ary)
+  a = Array.new(ary.length)
+  ary.each_index { |i| a[i] = ary[i] * ary[i] }
+  a
 end
-
-my_arr = [9, 10, 16, 25]
-p square_array(my_arr)
+end
