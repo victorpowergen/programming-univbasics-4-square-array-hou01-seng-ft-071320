@@ -1,8 +1,5 @@
 def square_array(array)
-  Enumerator.new do |y|
-    array.each { |e| y << e ** 2 }  
-  end
-  .take(array.length)
+  array.each_with_object([]) { |i,arr| arr << i ** 2 }
 end
 
 my_arr = [9, 10, 16, 25]
